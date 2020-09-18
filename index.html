@@ -1,4 +1,3 @@
-<script>
 var entries = `
 
 Diamonds are Forever
@@ -235,7 +234,7 @@ for (let i = 0; i < entries.length; i += 2) {
   map.set(entries[i + 1], entries[i]);
 }
 
-document.body.remove();
+if (document.body) document.body.remove();
 document.documentElement.append(document.createElement('body'));
 
 var input = document.createElement('input');
@@ -260,4 +259,3 @@ input.onkeyup = e => {
 
   node.nodeValue = results.map(([k, v]) => k + ': ' + v).join('\n');
 };
-</script>
